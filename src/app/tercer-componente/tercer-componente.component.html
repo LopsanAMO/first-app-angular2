@@ -1,0 +1,15 @@
+<h1>
+  tercer-componente works!
+</h1>
+<article *ngFor="let producto of productos">
+  <ul>
+    <li>{{producto.name}}</li>
+    <li>{{producto.price}}</li>
+    <li>{{producto.stock}}</li>
+    <li>{{producto.description}}</li>
+    <li><img [src]=producto.image></li>
+  </ul>
+  <button (click)="addProduct(producto)">Agregar</button>
+  {{producto.quantity}}
+  <button (click)="removeProduct(producto)">Quitar</button>
+</article>
